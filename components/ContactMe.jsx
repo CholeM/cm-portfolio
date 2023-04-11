@@ -22,12 +22,14 @@ const ContactMe = () => {
         method='POST' 
         netlify-honeypot="bot-field" 
         data-netlify="true"
+        action="/contact/"
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sx={{ display: { xs: 'none'} }}>
           <TextField
             label='Do not fill this out if you are human:'
             name="bot-field"
+            type='hidden'
           />
           </Grid>
           <Grid item xs={12} sm={6}>
