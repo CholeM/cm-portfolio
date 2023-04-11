@@ -1,0 +1,38 @@
+
+.projectCard {
+  max-width: 600px;
+}
+
+.rounded {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.codeCards {
+  background: linear-gradient(to right, rgb(44, 62, 80) 0%, rgb(52, 152, 219) 100%);
+  
+}
+.codeCards:hover {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+  transform: translateY(5px);;
+}
+
+.workRounded {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.darkWork {
+  background-color: "#1E1E1E";
+  border-radius: 10px;
+}
+
+.lightWork {
+  background-color: "#F2F2F2";
+  border-radius: 10px;
+}
+
+.projectImg {
+  max-width: 100%;
+   height: auto;
+}
