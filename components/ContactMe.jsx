@@ -22,7 +22,7 @@ const ContactMe = () => {
         method='POST' 
         netlify-honeypot="bot-field" 
         data-netlify="true"
-        action="/contact/"
+        action="/contact/?success=true"
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sx={{ display: { xs: 'none'} }}>
