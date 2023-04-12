@@ -2,9 +2,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import {   faDatabase,
-} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faDribbble } from '@fortawesome/free-brands-svg-icons';
 
 const AboutSec = styled(Box)(({ theme }) => ({
   '&.MuiBox-root': {
@@ -101,6 +99,9 @@ const AboutSection = () => (
             </a>
           </Grid>
           <Grid item>
+           <a href="https://github.com/CholeM" target="_blank">
+              <i><FontAwesomeIcon icon={faDribbble} size="4x" /></i>
+            </a>
           </Grid>
         </Grid>
       </Grid>
