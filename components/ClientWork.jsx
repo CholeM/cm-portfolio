@@ -18,7 +18,8 @@ const ProjectChip = styled(Chip)(() => ({
 
 const Head2 = styled(Typography)(() => ({
   '&.MuiTypography-root': {
-    padding: '1rem',
+    paddingTop: '1rem',
+    paddingBottom: '1rem',
   },
 }));
 

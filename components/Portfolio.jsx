@@ -38,7 +38,7 @@ const Portfolio = () => (
             </div>
           </a>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item sm={10} md={4}>
           <ProjectChip label="UX / UI DESIGN" />
           <br /> <br />
           <Typography gutterBottom variant="h4" component="h2">
@@ -67,7 +67,7 @@ const Portfolio = () => (
             </div>
           </a>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item sm={10} md={4}>
           <ProjectChip label="UX / UI DESIGN" />
           <br /><br />
           <Typography gutterBottom variant="h4" component='h2'>
@@ -96,7 +96,7 @@ const Portfolio = () => (
             </div>
           </a>
         </Grid>
-        <Grid item sm={4}>
+        <Grid item sm={10} md={4}>
           <ProjectChip label="UX / UI DESIGN" />
           {" "}
           <ProjectChip label="WEB DEV" />

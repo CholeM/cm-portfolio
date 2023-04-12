@@ -24,7 +24,7 @@ const AboutSection = () => (
 
   <AboutSec>
     <Container maxWidth="lg" sx={{ marginBottom: '4rem' }}>
-      <Grid container direction="row" spacing={3} alignItems='center'>
+      <Grid container direction="row" spacing={{ xs: 0, sm: 5, md: 3 }} alignItems='center'>
         <Grid item sm={4}>
           <img src='/images/me.png' />
         </Grid>
