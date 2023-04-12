@@ -270,7 +270,7 @@ const SaveUpProject = () => (
           </Grid>
         </Grid>
 
-        <Typography variant='h5' component='h4' gutterBottom>
+        <Typography variant='h5' component='h4' gutterBottom  sx={{ paddingTop: '1rem'}}>
           Visual Design
         </Typography>
         <Grid container direction="row" justifyContent="center">
