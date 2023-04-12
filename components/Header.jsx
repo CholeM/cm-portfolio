@@ -1,19 +1,61 @@
-import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
-import React from 'react';
+import { 
+  AppBar, 
+  Box, 
+  Button, 
+  Container, 
+  Drawer,
+  IconButton, 
+  List, 
+  ListItem, 
+  ListItemButton, 
+  ListItemText, 
+  Toolbar, 
+  Typography 
+} from '@mui/material';
+import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import Link from 'next/link';
 
 const Header = (props) => {
   const { projects, client, about, contact } = props;
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [open, setOpen] = useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleDrawerOpen = () => {
+    setOpen(true);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  }
+
+  const drawer = (
+    <Box
+      role='presentation'
+      sx={{ width: 250 }}
+    >
+      <List disablePadding>
+        <ListItem>
+          <ListItemButton component="a" href="/projects">
+            <ListItemText primary='Projects' />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton component="a" href="/work">
+            <ListItemText primary='Client Work' />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton component="a" href="/about">
+            <ListItemText primary='About' />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton component="a" href="/contact">
+            <ListItemText primary='Contact' />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Box>
+  );
 
   return (
     <AppBar position='fixed' sx={{ backgroundColor: 'success', boxShadow: 'none' }}>
@@ -59,13 +101,19 @@ const Header = (props) => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={handleDrawerOpen}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
-            
-            <Menu
+            <Drawer 
+              anchor='right'
+              open={open}
+              onClose={handleDrawerClose}
+            >
+              {drawer}
+            </Drawer>
+            {/*<Menu
               id="menu-appbar"
               anchorOrigin={{
                 vertical: 'top',
@@ -102,13 +150,13 @@ const Header = (props) => {
                   <Link href='/contact'>Contact</Link>
                 </Typography>
               </MenuItem>
-            </Menu>
+            </Menu>*/}
           </Box>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button
               href='/projects'
-              onClick={handleCloseNavMenu}
+              //onClick={handleCloseNavMenu}
               sx={{
                 my: 2, 
                 color: projects ? '#B1CEFB' : 'white', 
@@ -122,7 +170,7 @@ const Header = (props) => {
             </Button>
             <Button
               href='/work'
-              onClick={handleCloseNavMenu}
+              //onClick={handleCloseNavMenu}
               sx={{
                 my: 2, 
                 color: client ? '#B1CEFB' : 'white', 
@@ -136,7 +184,7 @@ const Header = (props) => {
             </Button>
             <Button
               href="/about"
-              onClick={handleCloseNavMenu}
+              //onClick={handleCloseNavMenu}
               sx={{
                 my: 2, 
                 color: about ? '#B1CEFB' : 'white', 
@@ -150,7 +198,7 @@ const Header = (props) => {
             </Button>
             <Button
               href='/contact'
-              onClick={handleCloseNavMenu}
+              //onClick={handleCloseNavMenu}
               sx={{
                 my: 2, 
                 color: contact ? '#B1CEFB' : 'white', 
