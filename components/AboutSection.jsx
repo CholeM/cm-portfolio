@@ -99,7 +99,7 @@ const AboutSection = () => (
             </a>
           </Grid>
           <Grid item>
-           <a href="https://github.com/CholeM" target="_blank">
+           <a href="https://dribbble.com/cholefolio" target="_blank">
               <i><FontAwesomeIcon icon={faDribbble} size="4x" /></i>
             </a>
           </Grid>
