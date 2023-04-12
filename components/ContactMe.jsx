@@ -13,7 +13,7 @@ const ContactBox = styled(Box)(({ theme }) => ({
 
 const ContactMe = () => {
   const [alert, setAlert] = useState('');
-  const [alertModal, setAlertModal] = useState(true);
+  const [alertModal, setAlertModal] = useState(false);
   const formRef = useRef();
   const [data, setData] = useState({
     name: '',
