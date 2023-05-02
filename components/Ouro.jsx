@@ -9,8 +9,20 @@ const ProjectSec = styled(Box)(({ theme }) => ({
   },
 }));
 
+const ProjectSummary = styled(Grid)(() => ({
+  '&.MuiGrid-root': {
+    paddingTop: '1rem',
+    paddingBottom: '2rem',
+    backgroundColor: '#F5F2FF',
+  },
+}));
+
 const ProjectInfo = styled(Grid)(() => ({
-  paddingBottom: '0.4rem',
+  paddingBottom: '0.5rem',
+}));
+
+const ProjectText = styled(Grid)(() => ({
+  paddingBottom: '4rem',
 }));
 
 const OuroProject = () => (
@@ -18,15 +30,16 @@ const OuroProject = () => (
     <Grid container direction="row" justifyContent="center" sx={{ backgroundColor: "#8EABD3" }}>
       <img src="/images/Ouro/Ouro-App.png" style={{ maxWidth: '790px' }} />
     </Grid>
-    <Container maxWidth='lg' sx={{ paddingTop: "1rem" }}>
-      <Typography variant='h3' component='h2' align='left' gutterBottom>
+    <ProjectSummary container direction="column">
+      <Container>
+      <Typography variant='h2' component='h2' align='left'>
         Ouro
       </Typography>
-      <Typography variant='subtitle1' paragraph gutterBottom sx={{ paddingBottom: '1rem' }}>
-        Corporate website and client portal for IT consulting and support services 
+      <Typography variant='subtitle1' paragraph className='pb-0-5'>
+        Designing a corporate website and client portal for IT consulting and support services 
         company
       </Typography>
-      <Grid container spacing={5} direction="row" sx={{ paddingBottom: '1rem' }}>
+      <Grid container spacing={5} direction="row" className='pb-1'>
         <Grid item>
           <Button
             href="https://github.com/CholeM/ouro-app" 
@@ -48,8 +61,7 @@ const OuroProject = () => (
           </Button>
         </Grid>
       </Grid>
-
-      <Grid container spacing={2} direction='row' sx={{ paddingBottom: '1rem' }}>
+      <Grid container spacing={4} direction='row'>
         <Grid item md={9}>
           <Typography variant='h4' component='h3' gutterBottom>
             Background
@@ -73,7 +85,29 @@ const OuroProject = () => (
             partners alike. In addition, the website should feature an updated client 
             portal in which they can easily send product updates to clients.
           </Typography>
+          <Typography variant='h4' component='h3' gutterBottom>
+            Solution for Ouro
+          </Typography>
+          <Typography variant='body1' paragraph gutterBottom>
+            Build a custom system for Ouro that includes a client portal accessible 
+            to approved employees and clients. The portal should include tools to 
+            manage client status and allow for file uploads and downloads, 
+            newsletter access, and product updates. The website should be 
+            responsive and reflect Ouro's brand while providing easy access to the 
+            necessary features.
+          </Typography>
+          <Typography variant='h4' component='h3' gutterBottom>
+            Results
+          </Typography>
+          <Typography variant='body1' paragraph gutterBottom>
+            After launching in 2021, <strong>traffic increased to the site by 67%</strong>, 
+            with a <strong>decreased bounce rate of 55%</strong>. The company also received 
+            <strong> positive feedback from over 60 different clients and partners</strong> who
+            utilized the client portal.
+          </Typography>
         </Grid>
+
+
         <Grid item md={3} container direction='column'>
           <ProjectInfo item>
             <Typography variant='h6'>
@@ -101,6 +135,22 @@ const OuroProject = () => (
             </Typography>
           </ProjectInfo>
           <ProjectInfo item>
+              <Typography variant='h6'>
+                Team
+              </Typography>
+              <Typography variant='p'>
+                UX Designer & Developer, Project Manager
+              </Typography>
+            </ProjectInfo>
+            <ProjectInfo item>
+              <Typography variant='h6'>
+                Role
+              </Typography>
+              <Typography variant='p'>
+                UX Designer, Developer
+              </Typography>
+            </ProjectInfo>
+          <ProjectInfo item>
             <Typography variant='h6'>
               Tools
             </Typography>
@@ -110,16 +160,13 @@ const OuroProject = () => (
           </ProjectInfo>
         </Grid>
       </Grid>
+      </Container>
+    </ProjectSummary>
 
-      <hr />
-      <Grid container direction='column' sx={{ paddingTop: '2rem' }}>
-        <Typography variant='h4' component='h3' gutterBottom>
-          Solution for Company
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          Build a custom system that Ouro staff, potential clients and partners can use. Create 
-          a professional theme that aligns with Ouro's brand. <strong>Make the website 
-          responsive so clients and partners can view it on the go.</strong>
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom className='pt-1'>
+          Client Portal
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
           The client portal would be accessible to clients and approved employees. <strong>Include 
@@ -127,70 +174,72 @@ const OuroProject = () => (
           inactive.</strong> These tools were important due to the subscription-based nature of 
           Ouro's products. Access must be able to be revoked when need be.
         </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-        <strong>The client would be able to do the following:</strong>
-        </Typography>
-        <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
+        <Grid container direction="row" spacing={3}>
+          <Grid item md={6}>
+          <Typography variant='body1' gutterBottom>
+            <strong>The client would be able to do the following:</strong>
+          </Typography>
+          <ul style={{ listStylePosition: "inside" }}>
           <li>Upload files and documents to the Ouro systems</li>
           <li>Download newsletters</li>
           <li>Download files uploaded by Ouro</li>
           <li>Download product updates</li>
         </ul>
-        <Typography variant='body1' paragraph gutterBottom>
-        <strong>Ouro would be able to do the following:</strong>
-        </Typography>
-        <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
-          <li>Upload client files, product updates and newsletters to the Ouro systems</li>
-          <li>Download client files</li>
-          <li>Disable client accounts</li>
-          <li>Create client accounts</li>
-          <li>Reset client passwords</li>
-        </ul>
-        <Grid container direction="row" sx={{ paddingBottom: '1rem' }} wrap='nowrap' alignItems='flex-end'>
-          <Grid item container direction="column" alignItems="center">
+          </Grid>
+          <Grid item md={6}>
+            <Typography variant='body1' gutterBottom>
+              <strong>Ouro would be able to do the following:</strong>
+            </Typography>
+            <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
+              <li>Upload client files, product updates and newsletters to the Ouro systems</li>
+              <li>Download client files</li>
+              <li>Disable client accounts</li>
+              <li>Create client accounts</li>
+              <li>Reset client passwords</li>
+            </ul>
+          </Grid>
+        </Grid>
+
+        <Grid container direction="row" alignItems='flex-end'>
+          <Grid item container direction="column" alignItems="center" lg={6}>
             <img src="/images/Ouro/Upload.png" width="100%" />
             <Typography variant="subtitle1" gutterBottom align="center">
               Upload Files Process
             </Typography>
           </Grid>
-          <Grid item container direction="column" alignItems="center">
+          <Grid item container direction="column" alignItems="center" lg={6}>
             <img src="/images/Ouro/Download.png" width="100%" />
             <Typography variant="subtitle1" gutterBottom align="center">
               Download Files Process
             </Typography>
           </Grid>
-        </Grid>
+        </Grid>        
+      </Container>
+    </ProjectText>
 
-        <hr />
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
-          Contributions / Impact
-        </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
-          Contributions to the Team
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom>
+          Contributions
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
-          I worked independently analyzing user research, wireframing, and iterating 
-          with stakeholder feedback to create a final prototyped solution. Once 
-          approved, I also developed the website and deployed it.
+          I worked together in a small team of two with the project manager. In my role as UX designer and developer
+          I analyzed user research, created wireframes, and communicated with the project manager to  
+          create a final prototyped solution. Once approved, I also developed the website and deployed it.
         </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
-          Impact
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          After launching in 2021, <strong>traffic increased to the site by 67%, 
-          with a decreased bounce rate of 55%</strong>. The company also received 
-          positive feedback from clients and partners who utilized the client portal.
-        </Typography>
+      </Container>
+    </ProjectText>
 
-        <hr />
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
+    <ProjectText container direction="column">
+      <Container>
+      <Typography variant='h3' component='h3' gutterBottom>
           Design
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
           I researched similar corporate website designs and possible client portal 
-          designs. I kept in mind what the client required for their site.
+          designs. I based the website design around Ouro's required pages and color scheme.
         </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
+        <Typography variant='h4' component='h4' gutterBottom>
           Low-Fidelity Wireframes
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
@@ -199,36 +248,26 @@ const OuroProject = () => (
           Ouro stakeholders and explained the process and low-level design. Once satisfied with the 
           presentation, I created the high-fidelity wireframe and the prototype.
         </Typography>
-        <Grid container direction="row" wrap='nowrap' spacing={1} alignItems="flex-end">
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Low-Website-1.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
+        <Grid container direction="row" spacing={3} alignItems="flex-end">
+          <Grid item container direction="column" lg={6}>
+            <img src='/images/Ouro/Low-Website-1.png' className='projectImg' />
+            <Typography variant="subtitle1" align="center">
               Homepage / About Us
             </Typography>
           </Grid>
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Low-Website-2.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
-              Services / Products
+          <Grid item container direction="column" lg={6}>
+            <img src='/images/Ouro/Low-Portal-2.png'className='projectImg' />
+            <Typography variant="subtitle1" align="center">
+              Client Portal - My Products / My Uploads
             </Typography>
           </Grid>
         </Grid>
-        <Grid container direction="row" wrap='nowrap' spacing={1} alignItems="flex-end">
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Low-Portal-1.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
-              Login / Dashboard
-            </Typography>
-          </Grid>
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Low-Portal-2.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
-              My Products / My Uploads
-            </Typography>
-          </Grid>
-        </Grid>
+      </Container>
+    </ProjectText>
 
-        <Typography variant='h5' component='h4' gutterBottom>
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h4' component='h4' gutterBottom>
           High-Fidelity Wireframes
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
@@ -236,37 +275,26 @@ const OuroProject = () => (
           company's branding. I presented these hi-fi wireframes to Ouro and allowed 
           them to test the prototype. Afterwards, I proceeded with the development process.
         </Typography>
-        <Grid container direction="row" wrap='nowrap' spacing={1} alignItems="flex-end">
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Website-1.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
+        <Grid container direction="row" spacing={3} alignItems="flex-end">
+          <Grid item container direction="column" lg={6}>
+            <img src='/images/Ouro/Website-1.png' className='projectImg' />
+            <Typography variant="subtitle1" align="center">
               Homepage / About Us
             </Typography>
           </Grid>
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Website-2.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
-              Services / Products
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid container direction="row" wrap='nowrap' spacing={1} alignItems="flex-end">
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Portal-1.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
-              Login / Dashboard
-            </Typography>
-          </Grid>
-          <Grid item container direction="column">
-            <img src='/images/Ouro/Portal-2.png' width='100%' />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
+          <Grid item container direction="column" lg={6}>
+            <img src='/images/Ouro/Portal-2.png' className='projectImg' />
+            <Typography variant="subtitle1" align="center">
               My Products / My Uploads
             </Typography>
           </Grid>
         </Grid>
+      </Container>
+    </ProjectText>
 
-        <hr />
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom>
           Development
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
@@ -278,12 +306,15 @@ const OuroProject = () => (
         <Typography variant='body1' paragraph gutterBottom>
           <strong>The development process took approximately 6 months of total effort. </strong>
         </Typography>
+      </Container>
+    </ProjectText>
 
-        <hr />
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom>
           Testing
         </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
+        <Typography variant='h4' component='h4' gutterBottom>
           Usability Testing
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
@@ -292,7 +323,7 @@ const OuroProject = () => (
           stakeholders at their leisure. They presented any issues or concerns that they may 
           have encountered.
         </Typography>
-        <Typography variant='h5' component='h4' gutterBottom sx={{ paddingTop: '0.5rem' }}>
+        <Typography variant='h4' component='h4' gutterBottom>
           Insights
         </Typography>
         <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
@@ -305,59 +336,52 @@ const OuroProject = () => (
           Due to this feedback, I made another round of updates; and the website was 
           then at the stage to launch.
         </Typography>
+      </Container>
+    </ProjectText>
 
-        <hr />
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
+    <ProjectText container direction="column">
+      <Container>
+      <Typography variant='h3' component='h3' gutterBottom>
           Results
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
-          Overall, the project was a success. The new website and client portal met the client's 
-          goals and receive positive user feedback. <strong>The use of custom development 
-          allowed for a tailored solution that fit the specific needs of Ouro, and the 
-          incorporation of user feedback throughout the design and development process 
-          ensured that the result was intuitive and user-friendly.</strong>
+          The Ouro website and client portal revamp project was successful and received 
+          positive user feedback due to the use of custom development and the incorporation 
+          of user feedback throughout the design and development process. The project could 
+          be further improved in future by establishing clear timelines and project scope 
+          from the beginning and incorporating more user research and testing. The 
+          collaboration between the client and developer resulted in a professional, 
+          user-friendly final product.
         </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          One area for improvement in future projects is establishing clear timelines and 
-          project scope from the beginning to manage client expectations and avoid any 
-          misunderstandings or changes in direction that could prolong the development process. 
-          Additionally, incorporating more user research and testing could further enhance the 
-          usability and effectiveness of the final product.
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          In conclusion, the Ouro website revamp project was a successful collaboration 
-          between myself and the client, resulting in a professional, user-friendly website 
-          and client portal that met the client's needs and goals.
-        </Typography>
-      </Grid>
       
-      <Grid container direction='row' sx={{ paddingBottom: '1rem' }}>
-        <Grid item md={4}>
-          <Typography variant='h4' component='h4' color="#6299E4">
-            <strong>55%</strong>
-          </Typography>
-          <Typography variant='h5' component='h5' color="#275594">
-          <strong>Decreased Bounce Rate</strong>
-          </Typography>
+        <Grid container direction='row'>
+          <Grid item md={4}>
+            <Typography variant='h3' component='h4' color="#6299E4">
+              <strong>55%</strong>
+            </Typography>
+            <Typography variant='h4' component='h5' color="#275594">
+            <strong>Decreased Bounce Rate</strong>
+            </Typography>
+          </Grid>
+          <Grid item md={4}>
+            <Typography variant='h3' component='h4' color="#6299E4">
+            <strong>67%</strong>
+            </Typography>
+            <Typography variant='h4' component='h5' color="#275594">
+            <strong>Increased Traffic Rate</strong>
+            </Typography>
+          </Grid>
+          <Grid item md={4}>
+            <Typography variant='h3' component='h4' color="#6299E4">
+            <strong>60+</strong>
+            </Typography>
+            <Typography variant='h4' component='h5' color="#275594">
+              <strong>Positive Ouro Client Reviews</strong>
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item md={4}>
-          <Typography variant='h4' component='h4' color="#6299E4">
-          <strong>67%</strong>
-          </Typography>
-          <Typography variant='h5' component='h5' color="#275594">
-          <strong>Increased Traffic Rate</strong>
-          </Typography>
-        </Grid>
-        <Grid item md={4}>
-          <Typography variant='h4' component='h4' color="#6299E4">
-          <strong>60+</strong>
-          </Typography>
-          <Typography variant='h5' component='h5' color="#275594">
-            <strong>Positive Ouro Client Reviews</strong>
-          </Typography>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </ProjectText>
   </ProjectSec>
 );
 

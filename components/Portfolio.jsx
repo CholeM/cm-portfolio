@@ -146,7 +146,7 @@ const Portfolio = () => (
                 Client Work
               </Typography>
               <Typography variant="body1" component="p" textAlign="center" color="#1e1e1e" gutterBottom>
-                Explore a selection of projects I"ve worked on for clients across various
+                Explore a selection of projects I've worked on for clients across various
                 industries.
               </Typography>
             </CardContent>
