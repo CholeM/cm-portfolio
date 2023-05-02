@@ -36,3 +36,23 @@
   max-width: 100%;
    height: auto;
 }
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pb-1-5 {
+  padding-bottom: 1.5rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-0-5 {
+  padding-bottom: 0.5rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}

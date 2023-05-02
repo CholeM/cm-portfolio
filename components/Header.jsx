@@ -93,7 +93,7 @@ const Header = (props) => {
               textDecoration: 'none',
             }}
           >
-            Chole Dev
+            Chole M
           </Typography>
           <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

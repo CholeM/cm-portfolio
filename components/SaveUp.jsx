@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Card, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 
 const ProjectSec = styled(Box)(({ theme }) => ({
@@ -9,8 +9,20 @@ const ProjectSec = styled(Box)(({ theme }) => ({
   },
 }));
 
+const ProjectSummary = styled(Grid)(() => ({
+  '&.MuiGrid-root': {
+    paddingTop: '1rem',
+    paddingBottom: '2rem',
+    backgroundColor: '#F5F2FF',
+  },
+}));
+
 const ProjectInfo = styled(Grid)(() => ({
-  paddingBottom: '0.4rem',
+  paddingBottom: '0.5rem',
+}));
+
+const ProjectText = styled(Grid)(() => ({
+  paddingBottom: '4rem',
 }));
 
 const SaveUpProject = () => (
@@ -18,128 +30,127 @@ const SaveUpProject = () => (
     <Grid container direction="row" justifyContent="center" sx={{ backgroundColor: "#77BB7D" }}>
       <img src="/images/SaveUp/SaveUp Cover.png" style={{ maxWidth: '790px' }} />
     </Grid>
-    <Container maxWidth='lg' sx={{ paddingTop: "1rem" }}>
-      <Typography variant='h3' component='h2' align='left' gutterBottom>
-        Save Up
-      </Typography>
-      <Typography variant='subtitle1' paragraph gutterBottom sx={{ paddingBottom: '1rem' }}>
-        Mobile App for empowering the youth's financial future
-      </Typography>
+    
+    <ProjectSummary container direction="column">
+      <Container>
+        <Typography variant='h2' component='h2' align='left' gutterBottom>
+          Save Up
+        </Typography>
+        <Typography variant='subtitle1' paragraph gutterBottom className='pb-1'>
+          Designing a mobile app that helps the youth to save and make better financial decisions.
+        </Typography>
 
-      <Grid container direction='row' sx={{ paddingBottom: '1rem' }}>
-        <Grid item md={9}>
-          <Typography variant='h4' component='h3' gutterBottom>
-            The Problem in My Country Barbados
-          </Typography>
-          <Typography variant='body1' paragraph gutterBottom>
-            Many young Barbadians struggle to meet their financial goals 
-            due to a lack of financial literacy, difficulty managing 
-            expenses, and limited access to resources. 
-          </Typography>
-          <Typography variant='h6' paragraph gutterBottom>
-            <i>
-              “How might we address these challenges and empower young 
-              Barbadians to take control of their finances and build a 
-              strong foundation for their future?”
-            </i>
-          </Typography>
-        </Grid>
-        <Grid item md={3} container direction='column'>
-          <ProjectInfo item>
-            <Typography variant='h6'>
-              Project Type
+        <Grid container direction='row' spacing={4}>
+          <Grid item md={9}>
+            <Typography variant='h4' component='h3' gutterBottom>
+              The Problem in My Country Barbados
             </Typography>
-            <Typography variant='p'>
-              Design Challenge, Individual Project
+            <Typography variant='body1' paragraph gutterBottom>
+              Many young Barbadians struggle to meet their financial goals 
+              due to a lack of financial literacy, difficulty managing 
+              expenses, and limited access to resources. 
             </Typography>
-          </ProjectInfo>
-          <ProjectInfo item>
-            <Typography variant='h6'>
-              Deliverables
+            <Typography variant='h5' paragraph gutterBottom className='pb-1'>
+              <i>
+                “How might we address these challenges and empower young 
+                Barbadians to take control of their finances and build a 
+                strong foundation for their future?”
+              </i>
             </Typography>
-            <Typography variant='p'>
-              Mobile App Prototype
+          
+            <Typography variant='h4' component='h3' gutterBottom>
+              Solution for Budgeting
             </Typography>
-          </ProjectInfo>
-          <ProjectInfo item>
-            <Typography variant='h6'>
-              Duration
+            <Typography variant='body1' paragraph gutterBottom>
+              SaveUp is a mobile application that allows users to set financial 
+              goals and track expenses and provides a community of peers and 
+              information on finance topics.
             </Typography>
-            <Typography variant='p'>
-              2 months
+            <Typography variant='h4' component='h3' gutterBottom>
+              Results
             </Typography>
-          </ProjectInfo>
-          <ProjectInfo item>
-            <Typography variant='h6'>
-              Tools
+            <Typography variant='body1' paragraph gutterBottom>
+              The app's look and feel was satisfactory for all users, and 19 out 
+              of 20 users were able to complete the sign and login process. However, 
+              half of the users did not find the tips and insights engaging or noticeable. 
+              The majority of users enjoyed the goal-setting section the most, but had 
+              difficulty editing their expenses, bills, and goal deposits.
             </Typography>
-            <Typography variant='p'>
-              Figma
-            </Typography>
-          </ProjectInfo>
-        </Grid>
-      </Grid>
-
-      <hr />
-      <Grid container direction='column' sx={{ paddingTop: '2rem' }}>
-        <Typography variant='h4' component='h3' gutterBottom>
-          Solution for Budgeting
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          SaveUp is a mobile application that allows users to set financial 
-          goals and track expenses and provides a community of peers and 
-          information on finance topics.
-        </Typography>
-       
-        <Typography variant='h4' component='h3' gutterBottom>
-          Design Thinking Process
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          I adopted the design thinking process, which aided me in 
-          developing the best possible solution for our users.
-        </Typography>
-        <Grid container direction="row" sx={{ paddingBottom: '1rem' }}>
-          <Grid item container direction="column">
-            <img src="/images/SaveUp/process.png" width="100%" />
+          </Grid>
+          <Grid item md={3} container direction='column'>
+            <ProjectInfo item>
+              <Typography variant='h6'>
+                Project Type
+              </Typography>
+              <Typography variant='p'>
+                Design Challenge, Team Project
+              </Typography>
+            </ProjectInfo>
+            <ProjectInfo item>
+              <Typography variant='h6'>
+                Team
+              </Typography>
+              <Typography variant='p'>
+                UX Designer, Project Manager, Design Team
+              </Typography>
+            </ProjectInfo>
+            <ProjectInfo item>
+              <Typography variant='h6'>
+                Role
+              </Typography>
+              <Typography variant='p'>
+                UX Designer
+              </Typography>
+            </ProjectInfo>
+            <ProjectInfo item>
+              <Typography variant='h6'>
+                Deliverables
+              </Typography>
+              <Typography variant='p'>
+                Mobile App Prototype
+              </Typography>
+            </ProjectInfo>
+            <ProjectInfo item>
+              <Typography variant='h6'>
+                Duration
+              </Typography>
+              <Typography variant='p'>
+                2 months
+              </Typography>
+            </ProjectInfo>
+            <ProjectInfo item>
+              <Typography variant='h6'>
+                Tools
+              </Typography>
+              <Typography variant='p'>
+                Figma
+              </Typography>
+            </ProjectInfo>
           </Grid>
         </Grid>
+      </Container>
+    </ProjectSummary>
 
-        <hr />
-
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
-          Empathy
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' color="primary" className="pt-1 pb-0-5">
+          Research
         </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
+        <Typography variant='h4' component='h4' gutterBottom>
           User Interviews and Surveys
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
-          To inform the design of our app, I <strong>conducted user interviews and surveys</strong> 
-          with young Barbadians. These Barbadians ranged in age from 18 - 30 years old; but with 
-          differing educational backgrounds and occupations.
+          The SaveUp team was interested in understanding the financial issues that affected young
+          Barbadians. User interviews and surveys were conducted among the target group, and questions 
+          were formulated around participants financial goals, challenges, habits and attitudes towards 
+          saving and budgeting. The team used the insights gathered from the research to refine app 
+          features to meet the needs and preferences of the target users.
         </Typography>
+
         <Typography variant='body1' paragraph gutterBottom>
-          I recruited 8 participants through social media, and <strong>conducted interviews in 
-          person and via video conferencing</strong>. I asked open-ended questions to 
-          understand their financial goals, challenges, habits, and attitudes towards 
-          budgeting and saving.
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          In addition to interviews, I also designed and distributed surveys to a larger 
-          sample of participants. I constructed the survey questions to be structured, 
-          with <strong>close-ended questions about financial behaviours, knowledge, and 
-          demographic information</strong>.
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          Through these research methods, I identified common pain points and challenges 
-          young Barbadians face in managing their finances. These insights helped me 
-          develop and refine the features of the budgeting and saving app, ensuring 
-          that the app meets the needs and preferences of our target users.
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          <b>Some insights resulting from the research include:</b>
+          <strong>Research insights:</strong>
         </Typography>
         <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
-          <li>Women were more likely to track their spending.</li>
           <li>Over 80% did not have a financial plan.</li>
           <li>90% have not saved money in a period longer than a year.</li>
           <li>
@@ -152,54 +163,107 @@ const SaveUpProject = () => (
             by the topic.
           </li>
         </ul>
-            
-        <Typography variant='body1' paragraph gutterBottom>
-          Overall, the user interviews and surveys played a critical role in our UX design 
-          process, allowing us to understand our users' needs and design a solution that is 
-          both effective and engaging.
-        </Typography>
-       
-       
-        <Typography variant='h5' component='h4' gutterBottom>
+
+        <Typography variant='h4' component='h4' gutterBottom>
           Competitive Analysis
         </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          During the competitive analysis process, I determined that there was no local 
-          app that filled the needs of our users. As such, I widen my scope and look 
-          beyond Barbados. These similar tools: <strong>Mint</strong>,{' '}
-          <strong>EveryDollar</strong>,{' '}<strong>YNAB</strong>.
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          <b>I determined the following during my analysis:</b>
-        </Typography>
-        <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
-          <li>Every service offered users a way to track spending and set financial goals.</li>
-          <li>Allowed users to sync with external accounts.</li>
-          <li>Every service came with an attached fee, especially for premium services.</li>
-          <li>Some did not have bill management.</li>
-          <li>There was no currency selector for the Barbadian dollar.</li>
-        </ul>
-        <Typography variant='body1' paragraph gutterBottom>
-          <b>The advantage of SaveUp would be:</b>
-        </Typography>
-        <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
-          <li>Tailored to the Barbadian public.</li>
-          <li> Offers easy-to-understand information and advice relating to finance.</li>
-          <li>The separation of bills from expenses.</li>
-        </ul>
+        <Grid container direction='row' wrap='nowrap' spacing={3} className="pb-2">
+          <Grid item container direction='column'>
+            <Grid item>
+              <Typography variant="h6" color="Highlight" gutterBottom>EveryDollar</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='body1' paragraph>
+                Budgeting app that offers free version and paid version. The free version carries for
+                basic features. The paid version offers additional advanced features.
+              </Typography>
+            </Grid>
+          </Grid>
 
-        <hr />
+          <Grid item container direction='column'>
+            <Grid item>
+              <Typography variant="h6" color="Highlight" gutterBottom>Mint</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='body1' paragraph>
+                Budgeting app that helps users track their expenses, set financial goals, and save money. 
+                Offers a free trial and a paid version that costs $84 per year.
+              </Typography>
+            </Grid>
+          </Grid>
 
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
-          Define
+          <Grid item container direction='column'>
+            <Grid item>
+              <Typography variant="h6" color="Highlight" gutterBottom>YNAB</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='body1' paragraph>
+                Budgeting app that allows users to create a budget, track their spending, and manage 
+                their investments. Free to use, and offers personalized financial advice 
+                based on user spending habits.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Typography variant='h5' paragraph textAlign='center' className='pb-2'>
+          <i>
+            We wanted to ensure that we kept SaveUp competitive when compared to the larger market space 
+            by studying other budgeting apps. Through this competitive analysis, we noticed some key takeaways: 
+          </i>
         </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
-          User Personas
+
+        <Grid container direction='row' spacing={3}>
+          <Grid item container direction='column' lg={4}>
+            <Grid item>
+              <Typography variant="h2" color="Highlight" textAlign='center'>1</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='body1' paragraph>
+                The foundation of each service was offering users a way to track spending and set 
+                financial goals.
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <Grid item container direction='column' lg={4}>
+            <Grid item>
+              <Typography variant="h2" color="Highlight" textAlign='center'>2</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='body1' paragraph>
+                While all three services offer a free version, some of the more advanced features 
+                require users to pay a monthly or yearly subscription fee. Mint, in particular, 
+                displays advertisements for financial products, which can be annoying for some users.
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <Grid item container direction='column' lg={4}>
+            <Grid item>
+              <Typography variant="h2" color="Highlight" textAlign='center'>3</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='body1' paragraph>
+                Some users find that the budgeting categories provided by these apps are too general 
+                and don't allow for enough customization to reflect their unique financial situation.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+    </ProjectText>
+
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom>
+          Our Users
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
-          Based on the research insights, I developed two primary personas exemplifying 
-          our target users, especially their goals and pain points.
+          From the insights and data gathered, we were able to come up with the user persona 
+          and prioritize features to support them. 
         </Typography>
+
         <Grid item container direction='row' spacing={2} sx={{ paddingBottom: "1rem" }}>
           <Grid item md={6}>
             <img src='/images/SaveUp/User Persona - Jennifer.png' width='100%' />
@@ -208,157 +272,162 @@ const SaveUpProject = () => (
             <img src='/images/SaveUp/User Persona - George.png' width='100%' />
           </Grid>
         </Grid>
-       
-        <hr />
+      </Container>
+    </ProjectText>
 
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
-          Ideate
-        </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
-          Affinity Mapping
+    <ProjectText container direction='column'>
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom sx={{ paddingTop: "1rem" }}>
+          Visualising the User Journey
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
-          After gathering information during the Empathy stage via user interviews and surveys, 
-          I created an affinity diagram. This map helped me to gain a better understanding of 
-          the users’ needs and problems. From there, I created possible solutions for each need.
+          The user journey showcases the significant steps taken by users, starting from the 
+          moment they access the SaveUp app.
         </Typography>
-        <Grid container sx={{ paddingBottom: '1rem' }}>
-          <img src='/images/SaveUp/SaveUp Affinity Map.png' width='100%' />
+        <Grid container direction='column'>
+          <img src='/images/SaveUp/SaveUp Task Flow.png' width="100%" />
         </Grid>
+      </Container>
+    </ProjectText>
 
-        <hr />
-
-        <Typography variant='h5' paragraph gutterBottom sx={{ paddingTop: "1rem" }}>
-          User Flow
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom>
+          Prototype
         </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          I was determined to make app navigation as seamless and simple as possible.
-        </Typography>
-
-        <Grid container direction='row' sx={{ paddingBottom: '1rem' }}>
-          <Grid item container direction='column'>
-            <img src='/images/SaveUp/SaveUp Task Flow.png' width="100%" />
-          <Typography variant="subtitle1" align="center">Task Flow</Typography>
+        <Grid item container direction="row" spacing={3} className='pb-1-5'>
+          <Grid item container direction="column" lg={4}>
+            <Typography variant='h4' component='h4' gutterBottom>
+              Low-Fidelity Wireframes
+            </Typography>
+            <Typography variant='body1' paragraph gutterBottom>
+              I visualised the flow into sketches. After multiple iterations 
+              and refinement, I developed low-fidelity wireframes.
+            </Typography>
+            <Typography variant='body1'>
+              <strong>Goals</strong>
+            </Typography>
+            <ul style={{ listStylePosition: "inside" }}>
+              <li>Brainstorm content to show on the homepage</li>
+              <li>Consider how to best showcase the user's data at a glance</li>
+            </ul>
+          </Grid>
+          <Grid item lg={8}>
+            <img src='/images/SaveUp/initial low fidelity.png' width="100%" />
           </Grid>
         </Grid>
         
-        <hr />
-
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
-          Prototype
-        </Typography>
-        <Typography variant='h5' component='h4' gutterBottom>
-          Low-Fidelity Wireframes
-        </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          I began the process of conceptualizing the mobile app. After multiple iterations 
-          and refinement, I developed low-fidelity wireframes.
+        <Typography variant='h5' paragraph textAlign='center' className='pb-1'>
+          <i>
+            Feedback indicated that the home page, and onboarding process needed improvements.
+          </i>
         </Typography>
 
-        <Grid container direction="row">
-          <Grid item container direction="column">
-            <img src='/images/SaveUp/initial low fidelity.png' width="100%" />
-            <Typography variant='subtitle1' align="center" sx={{ paddingTop: "0.5rem", paddingBottom: "1rem" }}>
-              Initial Low Fidelity Wireframes
-            </Typography>
-          </Grid>
-          <Grid item container direction="column">
+        <Grid item container direction="row" spacing={3}>
+          <Grid item lg={8}>
             <img src='/images/SaveUp/final low fidelity.png' width="100%" />
-            <Typography variant="subtitle1" align="center" sx={{ paddingTop: "0.5rem" }}>
-              Refined Low Fidelity Wireframes
+          </Grid>
+          <Grid item container direction="column" lg={4}>
+            <Typography variant='h4' component='h4' gutterBottom>
+                Refined Wireframes
             </Typography>
+            <Typography variant='body1' paragraph gutterBottom>
+              I applied this feedback and updated the lowfidelity wireframes.
+            </Typography>
+            <ul style={{ listStylePosition: "inside" }}>
+              <li>Refine the home screen</li>
+              <li>Add an onboarding process</li>
+              <li>Refine the visual design</li>
+            </ul>
           </Grid>
         </Grid>
+      </Container>
+    </ProjectText>
 
-        <Typography variant='h5' component='h4' gutterBottom  sx={{ paddingTop: '1rem'}}>
-          Visual Design
-        </Typography>
-        <Grid container direction="row" justifyContent="center">
-          <Grid item>
-              <img src='/images/SaveUp/visual design.png' width="100%" />
-            <Typography variant="subtitle1" gutterBottom align="center">
-              Visual Design: Colors, Fonts
-            </Typography>
-          </Grid>
-        </Grid>
-        <Typography variant='h5' component='h4' gutterBottom>
-          High-Fidelity Wireframes
+
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h4' component='h4' gutterBottom>
+          Visualising the Experience
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
           Between the low-fidelity and high-fidelity wireframes, I iterated upon the design. 
           I followed design principles and stayed true to the branding that I created for the app.
         </Typography>
-        <Grid container direction="row" sx={{ paddingBottom: '1rem' }}>
-          <Grid item container direction="column" alignItems="center">
-            <img src="/images/SaveUp/onboarding.png" width="100%" />
-            <Typography variant="subtitle1" gutterBottom align="center">Onboarding</Typography>
+        <Grid container direction="row" className="pb-1">
+          <Grid item lg={8}>
+            <img src='/images/SaveUp/onboarding.png' width="100%" />
           </Grid>
-          <Grid item container direction="column" alignItems="center">
-            <img src="/images/SaveUp/Login sign up.png" width="100%" />
-            <Typography variant="subtitle1" gutterBottom align="center">Login / Sign Up</Typography>
-          </Grid>
-          <Grid item container direction="column" alignItems="center">
-            <img src="/images/SaveUp/Add Savings Goal.png" width="100%" />
-            <Typography variant="subtitle1" gutterBottom align="center">Add Savings Goal</Typography>
-          </Grid>
-          <Grid item container direction="column" alignItems="center">
-            <img src="/images/SaveUp/Add budget.png" width="100%" />
-            <Typography variant="subtitle1" gutterBottom align="center">Add Budget / Expense</Typography>
-          </Grid>
-          <Grid item container direction="column" alignItems="center">
-            <img src="/images/SaveUp/Add bill.png" width="100%" />
-            <Typography variant="subtitle1" gutterBottom align="center">Add Bill</Typography>
-          </Grid>
-          <Grid item container direction="column" alignItems="center">
-            <img src="/images/SaveUp/Community.png" width="100%" />
-            <Typography variant="subtitle1" gutterBottom align="center">Community</Typography>
+          <Grid item lg={4}> 
+            <Typography variant='h6' color='Highlight' paragraph>Onboarding</Typography>
+            <Typography variant='body1' paragraph>
+              When a user enters the app for the first time they are welcome with a 
+              minimal, intuitive and clean onboarding guiding them through the first 
+              phase of the app.
+            </Typography>
           </Grid>
         </Grid>
-
-        <hr />
-
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
+        <Grid container direction="row" className="pb-1">
+          <Grid item lg={4}> 
+            <Typography variant='h6' color='Highlight' paragraph>Add Savings Goal</Typography>
+            <Typography variant='body1' paragraph>
+              From the app homepage, users can begin the process of adding their first savings goal.
+              The goal is easily trackable from the homepage.
+            </Typography>
+          </Grid>
+          <Grid item lg={8}>
+            <img src='/images/SaveUp/add savings goal.png' width="100%" />
+          </Grid>
+        </Grid>
+        <Grid container direction="row">
+          <Grid item lg={9}>
+            <img src='/images/SaveUp/community.png' width="100%" />
+          </Grid>
+          <Grid item lg={3}> 
+            <Typography variant='h6' color='Highlight' paragraph>Community</Typography>
+            <Typography variant='body1' paragraph>
+              Users have access to the community for added information and help on achieving
+              their savings goals. The community is divided into forums and articles.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </ProjectText>
+    
+    <ProjectText container direction="column">
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom>
           Testing
         </Typography>
-        <Typography variant='h5' paragraph gutterBottom>
+        <Typography variant='h4' paragraph gutterBottom>
           Usability Testing
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
-          To get feedback on the budgeting app, I conducted user testing.
+          The team finally conducted an unmoderated usability study with 20 participants 
+          remotely in Barbados to get feedback on SaveUp. Each participant 
+          was given 60 minutes to test the app, ensuring that users could share their 
+          honest opinions.
         </Typography>
-        <Typography variant='body1' paragraph gutterBottom>
-          The study was an unmoderated usability study to get the user’s true 
-          feelings about the app without my input. Since the app targeted Barbadians, 
-          it was conducted in Barbados remotely so that users could feel at ease. 
-          I chose 20 participants for the study, each given 60 minutes to test the app.
-        </Typography>
-
-        <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
-          <li>All users were satisfied with the look and feel of the app.</li>
-          <li>19 out of 20  users were able to complete the sign and login process.</li>
-          <li>50% of the users did not find the tips and insights to be as engaging or noticeable.</li>
-          <li>The majority of the users enjoyed the goals-setting section the most.</li>
-          <li>It was difficult for users to edit their expenses, bills and goal deposits.</li>
-        </ul>
-
-        <Typography variant='h5' component='h4' gutterBottom>
+        <Typography variant='h4' component='h4' gutterBottom>
           Insights
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
-          Thanks to the feedback from real-time users, I can proceed with another 
-          round of iterating and improving the app. Some insights I determined:
+          Thanks to the feedback from real-time users, we can proceed with another 
+          round of iterating and improving the app. Some insights we determined:
         </Typography>
-        <ul style={{ listStylePosition: "inside", paddingBottom: "1rem" }}>
-          <li>Bring more focus on the tips and insights for users.</li>
+        <ul style={{ listStylePosition: "inside"}}>
+          <li>Bring more focus to the tips and insights for users.</li>
           <li>
-            Edit expenses, bills, goals and deposits more intuitive for 
+            Edit expenses, bills, goals and deposits to be more intuitive for 
             users by adding a button.
           </li>
         </ul>
+      </Container>
+    </ProjectText>  
 
-        <hr />
-              
-        <Typography variant='h4' component='h3' gutterBottom sx={{ paddingTop: '1rem' }}>
+    <ProjectText container direction='column'>
+      <Container>
+        <Typography variant='h3' component='h3' gutterBottom>
           Retrospective
         </Typography>
         <Typography variant="body1" paragraph gutterBottom>
@@ -371,8 +440,8 @@ const SaveUpProject = () => (
           its goal instead of marginalizing the target audience. <strong>One must 
           listen and internalize the user feedback to meet their needs.</strong>
         </Typography>
-      </Grid>
-    </Container>
+      </Container>
+    </ProjectText>
   </ProjectSec>
 );
 
