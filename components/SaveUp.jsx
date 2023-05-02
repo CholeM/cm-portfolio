@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { Box, Card, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 
 const ProjectSec = styled(Box)(({ theme }) => ({
@@ -33,7 +33,7 @@ const SaveUpProject = () => (
     
     <ProjectSummary container direction="column">
       <Container>
-        <Typography variant='h2' component='h2' align='left' gutterBottom>
+        <Typography variant='h2' component='h2' align='left'>
           Save Up
         </Typography>
         <Typography variant='subtitle1' paragraph gutterBottom className='pb-1'>
@@ -167,8 +167,8 @@ const SaveUpProject = () => (
         <Typography variant='h4' component='h4' gutterBottom>
           Competitive Analysis
         </Typography>
-        <Grid container direction='row' wrap='nowrap' spacing={3} className="pb-2">
-          <Grid item container direction='column'>
+        <Grid container direction='row' spacing={3} className="pb-2">
+          <Grid item container direction='column' lg={4}>
             <Grid item>
               <Typography variant="h6" color="Highlight" gutterBottom>EveryDollar</Typography>
             </Grid>
@@ -180,7 +180,7 @@ const SaveUpProject = () => (
             </Grid>
           </Grid>
 
-          <Grid item container direction='column'>
+          <Grid item container direction='column' lg={4}>
             <Grid item>
               <Typography variant="h6" color="Highlight" gutterBottom>Mint</Typography>
             </Grid>
@@ -192,7 +192,7 @@ const SaveUpProject = () => (
             </Grid>
           </Grid>
 
-          <Grid item container direction='column'>
+          <Grid item container direction='column' lg={4}>
             <Grid item>
               <Typography variant="h6" color="Highlight" gutterBottom>YNAB</Typography>
             </Grid>
@@ -264,7 +264,7 @@ const SaveUpProject = () => (
           and prioritize features to support them. 
         </Typography>
 
-        <Grid item container direction='row' spacing={2} sx={{ paddingBottom: "1rem" }}>
+        <Grid item container direction='row' spacing={2}>
           <Grid item md={6}>
             <img src='/images/SaveUp/User Persona - Jennifer.png' width='100%' />
           </Grid>
@@ -277,7 +277,7 @@ const SaveUpProject = () => (
 
     <ProjectText container direction='column'>
       <Container>
-        <Typography variant='h3' component='h3' gutterBottom sx={{ paddingTop: "1rem" }}>
+        <Typography variant='h3' component='h3' gutterBottom>
           Visualising the User Journey
         </Typography>
         <Typography variant='body1' paragraph gutterBottom>
@@ -361,7 +361,7 @@ const SaveUpProject = () => (
           <Grid item lg={4}> 
             <Typography variant='h6' color='Highlight' paragraph>Onboarding</Typography>
             <Typography variant='body1' paragraph>
-              When a user enters the app for the first time they are welcome with a 
+              When a user enters the app for the first time they are greeted with a 
               minimal, intuitive and clean onboarding guiding them through the first 
               phase of the app.
             </Typography>
